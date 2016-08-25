@@ -21,7 +21,7 @@ class LoadGuestBookData implements FixtureInterface
             ],
             [
                 'name' => 'Tina Belcher',
-                'comment' => 'BUUUUUUUUUUUUTTS'
+                'comment' => 'Time for the charm bomb to explode.'
             ]
         ];
 

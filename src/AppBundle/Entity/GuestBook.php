@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @package AppBundle\Entity
  * @ORM\Entity
  */
-class GuestBook
+class GuestBook implements \JsonSerializable
 {
     /**
      * @var int
@@ -65,5 +65,14 @@ class GuestBook
     public function getComment(): string
     {
         return $this->comment;
+    }
+
+    public function jsonSerialize()
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'comment' => $this->comment,
+        ];
     }
 }
